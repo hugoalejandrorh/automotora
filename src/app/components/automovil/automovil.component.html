@@ -1,3 +1,23 @@
-<p>
-  automovil works!
-</p>
+<h1 class="animated fadeIn">{{automovil.Marca}} {{automovil.Modelo}}</h1>
+<hr>
+
+<div class="row animated fadeIn fast">
+
+<div class="col-md-4">
+
+  <img [src]="automovil.img" class="img-fluid" [alt]="automovil.Modelo">
+  <br><br>
+  <a [routerLink]="['/automoviles']" class="btn btn-outline-danger btn-block">Regresar</a>
+</div>
+
+<div class="col-md-8">
+<p>Marca: {{automovil.Marca}}</p>
+<p>Modelo: {{automovil.Modelo}}</p>
+<p>Kilometros: {{automovil.Kilometros}}</p>
+<p>Año: {{automovil.Anio}}</p>
+<p>Transmision: {{automovil.Transmision}}</p>
+<p>Nota: {{automovil.Nota}}</p>
+<p>Precio: {{automovil.Precio}}</p>
+<p>Region: {{automovil.Region}}</p>
+</div>
+</div>
