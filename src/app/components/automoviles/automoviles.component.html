@@ -1,3 +1,37 @@
-<p>
-  automoviles works!
-</p>
+<h1>Automóviles</h1>
+<hr>
+
+<div class="row">
+  <div class="col-md-4 animated fadeIn Fast" *ngFor="let automovil of automoviles; let i = index">
+    <img class="card-img-top img-fluid rounded" [src]="automovil.img" [alt]="automovil.Modelo">
+    <div class="card-block">
+      <h5 class="card-title">{{automovil.Marca}} {{automovil.Modelo}}</h5>
+      <p class="card-text">Precio: {{automovil.Precio}}</p>
+      <p class="card-text">Año: {{automovil.Anio}}</p>
+      <p class="card-text"><small class="text-muted">Venta Al Contado Y Con Financiera</small></p>
+
+      <button (click)="verAutomovil(i)" type="button" class="btn btn-outline-primary btn-block">
+        Ver más detalles
+      </button>
+
+      <!-- <a [routerLink]="['/automovil',i]" class="btn btn-outline-primary">Ver más detalles</a> -->
+    </div>
+  </div>
+</div>
+
+<!--<hr>
+<div class="card mb-3">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="assets/img/2013 Audi TTS 2.0 TFSI STronic Quattro Coupe.PNG" class="card-img" alt="Card image cap">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+-->

@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { APP_ROUTING } from './app.routes';
 
 //Servicios
-
+import { AutomovilesService } from './services/automoviles.service';
 //Componentes
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +15,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { AutomovilesComponent } from './components/automoviles/automoviles.component';
+import { AutomovilComponent } from './components/automovil/automovil.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AutomovilesComponent } from './components/automoviles/automoviles.compo
     HomeComponent,
     NosotrosComponent,
     ContactoComponent,
-    AutomovilesComponent
+    AutomovilesComponent,
+    AutomovilComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,9 @@ import { AutomovilesComponent } from './components/automoviles/automoviles.compo
     HttpClientModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [
+    AutomovilesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
